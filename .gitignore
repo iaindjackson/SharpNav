@@ -3,6 +3,9 @@
 [Oo]bj/
 [Bb]inaries/
 
+# Visual Studio cache/options directory
+.vs/
+
 # mstest test results
 TestResults
 

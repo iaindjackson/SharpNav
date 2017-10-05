@@ -27,6 +27,7 @@
     <AssemblyOriginatorKeyFile>SharpNav.snk</AssemblyOriginatorKeyFile>
     <DocumentationFile>..\..\Binaries\SharpNav\Debug\SharpNav.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1572;1573;1574;1587;1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Standalone|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +40,7 @@
     <AssemblyOriginatorKeyFile>SharpNav.snk</AssemblyOriginatorKeyFile>
     <DocumentationFile>..\..\Binaries\SharpNav\Standalone\SharpNav.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1572;1573;1574;1587;1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OpenTK|AnyCPU'">
     <OutputPath>..\..\Binaries\SharpNav\OpenTK\</OutputPath>
@@ -49,6 +51,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>..\..\Binaries\SharpNav\OpenTK\SharpNav.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1572;1573;1574;1587;1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SharpDX|AnyCPU'">
     <OutputPath>..\..\Binaries\SharpNav\SharpDX\</OutputPath>
@@ -59,6 +62,7 @@
     <AssemblyOriginatorKeyFile>SharpNav.SharpDX.snk</AssemblyOriginatorKeyFile>
     <DocumentationFile>..\..\Binaries\SharpNav\SharpDX\SharpNav.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1572;1573;1574;1587;1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MonoGame|AnyCPU'">
     <OutputPath>..\..\Binaries\SharpNav\MonoGame\</OutputPath>
@@ -70,6 +74,7 @@
     <Prefer32Bit>false</Prefer32Bit>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <NoWarn>1572;1573;1574;1587;1591</NoWarn>
   </PropertyGroup>
   <!-- Common items -->
   <ItemGroup>
@@ -78,8 +83,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>$(SolutionDir)packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="YamlDotNet">
-      <HintPath>$(SolutionDir)packages\YamlDotNet.Signed.3.8.0\lib\net35\YamlDotNet.dll</HintPath>
+    <Reference Include="YamlDotNet, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\YamlDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <!-- Configuration specific items -->
