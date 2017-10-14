@@ -18,6 +18,7 @@ using OpenTK.Input;
 using SharpNav;
 using SharpNav.Crowds;
 using SharpNav.Geometry;
+using SharpNav.IO.Binary;
 using SharpNav.IO.Json;
 using SharpNav.Pathfinding;
 
@@ -354,8 +355,18 @@ namespace SharpNav.Examples
 		{
 			try
 			{
+				switch (System.IO.Path.GetExtension(path))
+				{
+					case ".snb":
+						tiledNavMesh = new NavMeshBinarySerializer().Deserialize(path);
+						break;
+					case ".snj":
+						tiledNavMesh = new NavMeshJsonSerializer().Deserialize(path);
+						break;
+					default:
+						throw new NotImplementedException();
+				}
 
-				tiledNavMesh = new NavMeshJsonSerializer().Deserialize(path);
 				navMeshQuery = new NavMeshQuery(tiledNavMesh, 2048);
 				hasGenerated = true;
 				displayMode = DisplayMode.NavMesh;
@@ -384,7 +395,17 @@ namespace SharpNav.Examples
 
 			try
 			{
-				new NavMeshJsonSerializer().Serialize(path, tiledNavMesh);
+				switch (System.IO.Path.GetExtension(path))
+				{
+					case ".snb":
+						new NavMeshBinarySerializer().Serialize(path, tiledNavMesh);
+						break;
+					case ".snj":
+						new NavMeshJsonSerializer().Serialize(path, tiledNavMesh);
+						break;
+					default:
+						throw new NotImplementedException();
+				}
 			}
 			catch (Exception e)
 			{

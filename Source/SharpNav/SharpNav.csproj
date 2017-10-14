@@ -146,6 +146,7 @@
     <Compile Include="IO\Json\PolyIdConverter.cs" />
     <Compile Include="IO\Json\Vector3Converter.cs" />
     <Compile Include="IO\Json\NavMeshJsonSerializer.cs" />
+    <Compile Include="IO\Binary\NavMeshBinarySerializer.cs" />
     <Compile Include="IO\NavMeshConfigurationFile.cs" />
     <Compile Include="IO\NavMeshSerializer.cs" />
     <Compile Include="NavMesh.cs" />
