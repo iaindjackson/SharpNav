@@ -6,18 +6,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("SharpNav")]
-[assembly: AssemblyDescription("A fully-managed navigation mesh library.")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SharpNav")]
-[assembly: AssemblyCopyright("Copyright © 2013-2015 Robert Rouhani <robert.rouhani@gmail.com> and other contributors (see CONTRIBUTORS file).")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
 [assembly: CLSCompliant(true)]
 
 #if MONOGAME
@@ -55,8 +43,6 @@ using System.Runtime.InteropServices;
 //     1.2.0       |   1.2.0.200
 //     2.0.1       |   2.0.1.200
 // 
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
 
 // There are two ways of differentiating versions of SharpNav.dll that are built with engine integrations.
 // The first is metadata included with the SemVer version (e.g. 1.0.0-alpha.2+monogame). The second is that
@@ -70,7 +56,7 @@ using System.Runtime.InteropServices;
 #elif SHARPDX
 [assembly: AssemblyInformationalVersion("1.0.0-alpha.2+sharpdx")]
 #else
-[assembly: AssemblyInformationalVersion("1.0.0-alpha.2")]
+//[assembly: AssemblyInformationalVersion("1.0.0-alpha.2")]
 #endif
 
 // Setting ComVisible to false makes the types in this assembly not visible 
